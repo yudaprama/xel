@@ -159,7 +159,7 @@ export class XCheckboxElement extends HTMLElement {
   //   false
   // @attribute
   get disabled() {
-    return this.hasAttribute("disabled");
+    return this.hasAttribute("disabled") ? this.getAttribute("disabled") : false;
   }
   set disabled(disabled) {
     disabled ? this.setAttribute("disabled", "") : this.removeAttribute("disabled");
