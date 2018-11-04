@@ -135,7 +135,7 @@ export class XCheckboxElement extends HTMLElement {
   //   false
   // @attribute
   get toggled() {
-    return this.hasAttribute("toggled");
+    return this.hasAttribute("toggled") ? this.getAttribute("toggled") : false;
   }
   set toggled(toggled) {
     toggled ? this.setAttribute("toggled", "") : this.removeAttribute("toggled");
