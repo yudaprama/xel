@@ -139,7 +139,8 @@ export class XCheckboxElement extends HTMLElement {
 	  return this.hasAttribute("toggled") ? this.getAttribute("toggled") == 'true' : false;
   }
   set toggled(toggled) {
-    toggled ? this.setAttribute("toggled", "") : this.removeAttribute("toggled");
+	  console.log("set toggled(toggled):", toggled);
+	  toggled ? this.setAttribute("toggled", "") : this.removeAttribute("toggled");
   }
 
   // @type
