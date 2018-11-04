@@ -135,7 +135,8 @@ export class XCheckboxElement extends HTMLElement {
   //   false
   // @attribute
   get toggled() {
-    return this.hasAttribute("toggled") ? JSON.parse(this.getAttribute("toggled")) : false;
+	  console.log("this.getAttribute(\"toggled\") == 'true':", this.getAttribute("toggled") == 'true');
+	  return this.hasAttribute("toggled") ? this.getAttribute("toggled") == 'true' : false;
   }
   set toggled(toggled) {
     toggled ? this.setAttribute("toggled", "") : this.removeAttribute("toggled");
